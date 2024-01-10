@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đà Lạt Mộng Mơ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/base.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1 class="text-5xl font-extrabold">Chào Mừng Đến Với Đà Lạt</h1>
+    <section class="container">
+      <div
+        class="destination"
+        onclick="openLightbox(this.querySelector('img'))"
+      >
+        <img
+          src="https://static.vinwonders.com/production/dia-diem-du-lich-da-lat-2.jpg"
+          alt="Quảng trường Lâm Viên"
+        />
+        <div class="destination-info">
+          <h2 class="text-4xl font-bold">Quảng trường Lâm Viên</h2>
+          <p>
+            Với vị trí trung tâm và kiến trúc hoành tráng, quảng trường Đà Lạt
+            là điểm đến hấp dẫn cho du khách muốn khám phá văn hóa và kiến trúc
+            độc đáo của thành phố.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination">
+        <img
+          src="https://static.vinwonders.com/production/dia-diem-du-lich-da-lat-3.jpg"
+          alt="Quảng trường Lâm Viên"
+        />
+        <div class="destination-info">
+          <h2 class="text-4xl font-bold">Thung Lũng Tình Yêu</h2>
+          <p>
+            Thung lũng Tình Yêu là một địa điểm du lịch Đà Lạt lãng mạn và đẹp
+            mắt.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination">
+        <img
+          src="https://static.vinwonders.com/production/dia-diem-du-lich-da-lat-4.jpg"
+          alt="Quảng trường Lâm Viên"
+        />
+        <div class="destination-info">
+          <h2 class="text-4xl font-bold">Núi Langbiang</h2>
+          <p>
+            Núi Langbiang Đà Lạt, nằm cách trung tâm thành phố khoảng 12km, là
+            một địa điểm du lịch nổi tiếng thu hút khách du lịch.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination">
+        <img
+          src="https://static.vinwonders.com/production/dia-diem-du-lich-da-lat-5.jpg"
+          alt="Quảng trường Lâm Viên"
+        />
+        <div class="destination-info">
+          <h2 class="text-4xl font-bold">Làng Cù Lần</h2>
+          <p>
+            Đi sâu vào những con đường nhỏ đầy hoa, một cảnh tượng bất ngờ xuất
+            hiện: một chiếc cầu treo nối vắt qua dòng suối nhỏ, dẫn vào làng Cù
+            Lần.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination">
+        <img
+          src="https://static.vinwonders.com/production/dia-diem-du-lich-da-lat-6.jpg"
+          alt="Quảng trường Lâm Viên"
+        />
+        <div class="destination-info">
+          <h2 class="text-4xl font-bold">DaLat Fairytale Land</h2>
+          <p>
+            DaLat Fairytale Land là một địa điểm du lịch tuyệt vời ở Đà Lạt, nơi
+            mang đến cho du khách một không gian như truyện cổ tích.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form đăng ký tour -->
+    <form
+      id="tourForm"
+      class="max-w-s pt-20 bg-fuchsia-100 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+    >
+      <h1 class="text-5xl font-bold">Form Đăng Ký</h1>
+      <div class="name">
+        <label for="name">Họ và Tên:</label>
+        <input
+          type="text"
+          id="tourName"
+          name="name"
+          class="border border-solid border-neutral-400"
+          required
+        />
+      </div>
+      <div class="email">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="tourEmail"
+          name="email"
+          class="border border-solid border-neutral-400"
+          required
+        />
+      </div>
+      <div class="add">
+        <label for="destination">Điểm Đến Mong Muốn:</label>
+        <select
+          id="tourDestination"
+          name="destination"
+          class="border border-solid border-neutral-400"
+          required
+        >
+          <option value="Quảng trường Lâm Viên">Quảng trường Lâm Viên</option>
+          <option value="Thung Lũng Tình Yêu">Thung Lũng Tình Yêu</option>
+          <option value="Núi Langbiang">Núi Langbiang</option>
+          <option value="Làng Cù Lần">Làng Cù Lần</option>
+          <option value="DaLat Fairytale Land">DaLat Fairytale Land</option>
+        </select>
+      </div>
+      <div class="date">
+        <label for="departure-date">Ngày Khởi Hành:</label>
+        <input
+          type="date"
+          id="tourDate"
+          name="departure-date"
+          class="border border-solid border-neutral-400"
+          required
+        />
+      </div>
+      <button
+        type="button"
+        onclick="submitTourForm()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Đặt Tour
+      </button>
+    </form>
+    <h1 class="text-5xl font-bold">Danh Sách Đăng Ký</h1>
+    <ul id="tourComments"></ul>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="imageLightbox" onclick="closeLightbox()">
+      <span class="close-button" onclick="closeLightbox()">&times;</span>
+      <img src="" alt="Large Image" id="largeImage" />
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

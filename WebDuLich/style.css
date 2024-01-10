@@ -1,0 +1,56 @@
+h1 {
+    color: red;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    width: 100%;
+    z-index: 999;
+    align-items: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+
+img {
+    width: 60%;
+}
